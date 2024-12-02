@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="435d4e25-96a1-4d38-b4e7-800d88ed5fee" name="Changes" comment="Cambios en el diseño de la interfaz de sucursal">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/utleon/zarape/ControllerCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/utleon/zarape/model/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/utleon/zarape/model/Persona.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/utleon/zarape/model/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/utleon/zarape/clientes.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/utleon/zarape/img/icons8-person-30.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/utleon/zarape/ControllerPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/utleon/zarape/ControllerPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/utleon/zarape/principal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/utleon/zarape/principal.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="435d4e25-96a1-4d38-b4e7-800d88ed5fee" name="Changes" comment="Cambios en el diseño de la interfaz de sucursal" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732292822760</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Cambios en el diseño de la interfaz de sucursal">
+      <option name="closed" value="true" />
+      <created>1733177115385</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733177115385</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
