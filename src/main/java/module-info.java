@@ -9,4 +9,5 @@ module org.utleon.zarape {
     opens org.utleon.zarape.model to com.google.gson;
     opens org.utleon.zarape to javafx.fxml;
     exports org.utleon.zarape;
+
 }

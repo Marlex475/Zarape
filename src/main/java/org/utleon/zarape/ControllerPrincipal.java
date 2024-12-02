@@ -11,6 +11,9 @@ import java.io.IOException;
 
 public class ControllerPrincipal {
     @FXML
+    private HBox clientesItemBar;
+
+    @FXML
     private AnchorPane mainContainer;
 
     @FXML
@@ -30,6 +33,9 @@ public class ControllerPrincipal {
         });
         salirItemBar.setOnMouseClicked(event -> {
             System.exit(0);
+        });
+        clientesItemBar.setOnMouseClicked(event ->{
+            loadFXML("clientes");
         });
     }
 

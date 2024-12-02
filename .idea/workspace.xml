@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="435d4e25-96a1-4d38-b4e7-800d88ed5fee" name="Changes" comment="Cambios en el diseño de la interfaz de sucursal">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/utleon/zarape/bebidas.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/utleon/zarape/ControllerCliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/utleon/zarape/model/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/utleon/zarape/model/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/utleon/zarape/model/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/utleon/zarape/clientes.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/utleon/zarape/img/icons8-person-30.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/utleon/zarape/sucursales.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/utleon/zarape/sucursales.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/utleon/zarape/ControllerPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/utleon/zarape/ControllerPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/utleon/zarape/principal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/utleon/zarape/principal.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,7 +51,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Marlex475/Zarape.git&quot;,
-    &quot;accountId&quot;: &quot;8777e7df-cd86-4222-8bba-334c7ba94bf2&quot;
+    &quot;accountId&quot;: &quot;bc5e48cb-95cf-4abb-bb73-f13e1cc4c080&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -56,19 +63,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Zarape [:org.utleon.zarape.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/marti/IdeaProjects/Zarape/src/main/resources/org/utleon/zarape/img&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.log&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Zarape [:org.utleon.zarape.Main.main()].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/alexl/Documents/apps/Zarape/src/main/resources/org/utleon/zarape/img",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.log"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alexl\Documents\apps\Zarape\src\main\resources\org\utleon\zarape\img" />
+      <recent name="C:\Users\alexl\Documents\apps\Zarape\src\main\resources\org\utleon\zarape" />
       <recent name="C:\Users\marti\IdeaProjects\Zarape\src\main\resources\org\utleon\zarape\img" />
       <recent name="C:\Users\marti\IdeaProjects\Zarape\src\main\resources\org\utleon\zarape\style" />
     </key>
