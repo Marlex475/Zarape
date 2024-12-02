@@ -26,6 +26,34 @@
             </ImageView>
           </children>
         </HBox>
+        <HBox fx:id="empleadoItemBar" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="menu-bar-item">
+          <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="120.0" text="Empleados" textFill="BLACK" HBox.hgrow="ALWAYS">
+              <font>
+                <Font size="20.0" />
+              </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@img/employee.png" />
+              </image>
+            </ImageView>
+          </children>
+        </HBox>
+        <HBox fx:id="clientesItemBar" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="menu-bar-item">
+          <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="120.0" text="Clientes" textFill="BLACK" HBox.hgrow="ALWAYS">
+              <font>
+                <Font size="20.0" />
+              </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@img/icons8-person-30.png" />
+              </image>
+            </ImageView>
+          </children>
+        </HBox>
         <HBox fx:id="sucursalItemBar" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="menu-bar-item">
           <children>
             <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="120.0" text="Sucursales" textFill="BLACK" HBox.hgrow="ALWAYS">
@@ -64,20 +92,6 @@
             <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
               <image>
                 <Image url="@img/drinks.png" />
-              </image>
-            </ImageView>
-          </children>
-        </HBox>
-        <HBox fx:id="clientesItemBar" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="menu-bar-item">
-          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="120.0" text="Clientes" textFill="BLACK" HBox.hgrow="ALWAYS">
-              <font>
-                <Font size="20.0" />
-              </font>
-            </Label>
-            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-              <image>
-                <Image url="@img/icons8-person-30.png" />
               </image>
             </ImageView>
           </children>
