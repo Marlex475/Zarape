@@ -21,6 +21,8 @@ public class ControllerPrincipal {
     @FXML
     private HBox sucursalItemBar;
     @FXML
+    private HBox empleadoItemBar;
+    @FXML
     private HBox salirItemBar;
 
     @FXML
@@ -36,6 +38,9 @@ public class ControllerPrincipal {
         });
         clientesItemBar.setOnMouseClicked(event ->{
             loadFXML("clientes");
+        });
+        empleadoItemBar.setOnMouseClicked(event ->{
+            loadFXML("empleados");
         });
     }
 
