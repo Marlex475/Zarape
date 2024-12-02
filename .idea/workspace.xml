@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="435d4e25-96a1-4d38-b4e7-800d88ed5fee" name="Changes" comment="Cambios en el diseño de la interfaz de sucursal" />
+    <list default="true" id="435d4e25-96a1-4d38-b4e7-800d88ed5fee" name="Changes" comment="Cambios en el diseño de la interfaz de sucursal">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/utleon/zarape/ControllerCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/utleon/zarape/ControllerCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/utleon/zarape/clientes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/utleon/zarape/clientes.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -171,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733177613939</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Cambios en el diseño de la interfaz de sucursal">
+      <option name="closed" value="true" />
+      <created>1733178042850</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1733178042850</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

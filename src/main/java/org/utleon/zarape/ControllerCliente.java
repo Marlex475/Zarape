@@ -28,13 +28,13 @@ import java.util.List;
 public class ControllerCliente {
 
     @FXML
-    private TextField txtIdCl, txtNom, txtApe, txtTelUsr, txtIdPer, txtNomUsr, txtCont;
+    private TextField txtIdCl, txtNom, txtApe, txtTelUsr, txtIdPer, txtNomUsr, txtCont, txtIdUsr;
 
     @FXML
     private ComboBox<Ciudad> selector;
 
     @FXML
-    private Button btnAdd, btnCancelar, btnUpdate;
+    private Button btnAdd, btnCancelar, btnUpdate, btndelete;
 
     @FXML
     private TableView<Cliente> tabCl;
@@ -60,7 +60,7 @@ public class ControllerCliente {
     private ObservableList<Ciudad> ciudades;
     private final ObservableList<Cliente> clientes = FXCollections.observableArrayList();
     private final Gson gson = new Gson();
-
+    int flag=0;
     @FXML
     private void initialize() {
         colIdCliente.setCellValueFactory(cell -> new SimpleObjectProperty<>(cell.getValue().getIdCliente()));
@@ -114,10 +114,18 @@ public class ControllerCliente {
         txtIdPer.setText(String.valueOf(selectedCliente.getPersona().getIdPersona()));
         txtNomUsr.setText(selectedCliente.getUser().getNombre());
         txtCont.setText(selectedCliente.getUser().getContrasenia());
+        txtIdUsr.setText(""+selectedCliente.getUser().getIdUsuario());
+        selector.setValue(findCiudadById(selectedCliente.getPersona().getIdCiudad()));
+        flag=1;
+
     }
 
     @FXML
     public void insertCliente() {
+        if(flag==1){
+           showAlarm("Error","No se puede ingresar un registro ya existente");
+           return;
+        }
         try {
             // Prepare the Cliente object
             Persona persona = new Persona(0, txtNom.getText(), txtApe.getText(), txtTelUsr.getText(),
@@ -148,7 +156,76 @@ public class ControllerCliente {
         }
     }
 
+    public void updateCliente(){
+        if(flag==0){
+            showAlarm("Error","No ha seleccionado ningun registro.");
+            return;
+        }
+        try {
+            // Prepare the Cliente object
+            Persona persona = new Persona(Integer.parseInt(txtIdPer.getText()), txtNom.getText(), txtApe.getText(), txtTelUsr.getText(),
+                    selector.getSelectionModel().getSelectedItem().getIdCiudad());
+            Usuario user = new Usuario(Integer.parseInt(txtIdUsr.getText()), txtNomUsr.getText(), txtCont.getText(), 1);
+            Cliente cliente = new Cliente(Integer.parseInt(txtIdCl.getText()), persona, user, (byte) 1);
 
+            // Convert the Cliente object to JSON
+            String clienteJson = gson.toJson(cliente);
+            System.out.println(clienteJson);
+
+            // Send the POST request using Unirest
+            HttpResponse<String> response = Unirest.post("http://localhost:8080/Mexicode_Proyecto/api/cliente/update")
+                    .header("Content-Type", "application/x-www-form-urlencoded")
+                    .field("datosCliente", clienteJson) // Send the JSON as a form field
+                    .asString();
+
+            // Handle the response
+            if (response.getStatus() == 200) {
+                System.out.println("Cliente enviado exitosamente.");
+                cancelarCl(); // Reset the form
+                imprimirTablaCl(); // Refresh the table
+                flag=0;
+            } else {
+                System.err.println("Error al enviar cliente: " + response.getStatus() + " - " + response.getBody());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void deleteCliente(){
+        if(flag==0){
+            showAlarm("Error","No ha seleccionado ningun registro.");
+            return;
+        }
+        try {
+            // Prepare the Cliente object
+            Persona persona = new Persona(Integer.parseInt(txtIdPer.getText()), txtNom.getText(), txtApe.getText(), txtTelUsr.getText(),
+                    selector.getSelectionModel().getSelectedItem().getIdCiudad());
+            Usuario user = new Usuario(Integer.parseInt(txtIdUsr.getText()), txtNomUsr.getText(), txtCont.getText(), 1);
+            Cliente cliente = new Cliente(Integer.parseInt(txtIdCl.getText()), persona, user, (byte) 1);
+
+            // Convert the Cliente object to JSON
+            String clienteJson = gson.toJson(cliente);
+            System.out.println(clienteJson);
+
+            // Send the POST request using Unirest
+            HttpResponse<String> response = Unirest.post("http://localhost:8080/Mexicode_Proyecto/api/cliente/delete")
+                    .header("Content-Type", "application/x-www-form-urlencoded")
+                    .field("datosCliente", clienteJson) // Send the JSON as a form field
+                    .asString();
+
+            // Handle the response
+            if (response.getStatus() == 200) {
+                System.out.println("Cliente enviado exitosamente.");
+                cancelarCl(); // Reset the form
+                imprimirTablaCl();
+                flag=0;// Refresh the table
+            } else {
+                System.err.println("Error al enviar cliente: " + response.getStatus() + " - " + response.getBody());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @FXML
     public void cancelarCl() {
         txtIdCl.clear();
@@ -158,7 +235,9 @@ public class ControllerCliente {
         txtIdPer.clear();
         txtNomUsr.clear();
         txtCont.clear();
+        txtIdUsr.clear();
         selector.setValue(null);
+        flag=0;
     }
 
     private void loadCiudades() {
@@ -173,4 +252,23 @@ public class ControllerCliente {
             });
         }).start();
     }
+    private Ciudad findCiudadById(int id) {
+        Ciudad ciudad = null;
+        for (Ciudad item : ciudades) {
+            if(item.getIdCiudad() == id) {
+                return item;
+            }
+        }
+        return null;
+    }
+    public static void showAlarm(String title, String message) {
+        Platform.runLater(() -> { // Ensure it runs on the JavaFX Application Thread
+            Alert alert = new Alert(Alert.AlertType.WARNING); // You can change the type to ERROR, INFORMATION, etc.
+            alert.setTitle(title);
+            alert.setHeaderText(null); // No header for simplicity
+            alert.setContentText(message);
+            alert.showAndWait();
+        });
+    }
+
 }

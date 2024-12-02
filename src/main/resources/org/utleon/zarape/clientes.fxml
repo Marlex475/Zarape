@@ -46,7 +46,7 @@
             <GridPane.margin>
                <Insets left="30.0" />
             </GridPane.margin></Label>
-            <TextField fx:id="txtIdCl" GridPane.columnIndex="1" />
+            <TextField fx:id="txtIdCl" editable="false" GridPane.columnIndex="1" />
 
             <Label text="Nombre:" GridPane.rowIndex="1">
             <GridPane.margin>
@@ -70,7 +70,7 @@
             <GridPane.margin>
                <Insets left="42.0" />
             </GridPane.margin></Label>
-            <TextField fx:id="txtIdPer" GridPane.columnIndex="3" />
+            <TextField fx:id="txtIdPer" editable="false" GridPane.columnIndex="3" />
 
             <Label text="UserName:" GridPane.columnIndex="2" GridPane.rowIndex="1">
             <GridPane.margin>
@@ -88,16 +88,21 @@
             <GridPane.margin>
                <Insets left="30.0" />
             </GridPane.margin></Label>
-            <TextField fx:id="txtIdUsr" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextField fx:id="txtIdUsr" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="3" />
 
             <Label text="Ciudad:" GridPane.columnIndex="4" />
             <ComboBox fx:id="selector" prefHeight="25.0" prefWidth="180.0" promptText="Ciudad" GridPane.columnIndex="4" />
 
             <!-- Botones más grandes -->
             <Button fx:id="btnAdd" onAction="#insertCliente" prefHeight="49.0" prefWidth="148.0" text="Guardar" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Button fx:id="btnCancelar" onAction="#cancelarCl" prefHeight="50.0" prefWidth="148.0" text="Cancelar" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button fx:id="btnCancelar" onAction="#cancelarCl" prefHeight="50.0" prefWidth="148.0" text="Cancelar" GridPane.columnIndex="4" GridPane.rowIndex="4" />
             <HBox alignment="CENTER" prefHeight="0.0" prefWidth="148.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-         <Button fx:id="btnUpdate" prefHeight="49.0" prefWidth="128.0" text="Modificar" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <Button fx:id="btnUpdate" onAction="#updateCliente" prefHeight="49.0" prefWidth="128.0" text="Modificar" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <font>
+               <Font size="11.0" />
+            </font>
+         </Button>
+         <Button fx:id="btndelete" onAction="#deleteCliente" prefHeight="49.0" prefWidth="128.0" text="Eliminar" GridPane.columnIndex="3" GridPane.rowIndex="4">
             <font>
                <Font size="11.0" />
             </font>
