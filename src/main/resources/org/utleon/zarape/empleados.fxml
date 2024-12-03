@@ -25,7 +25,7 @@
             </font>
         </Label>
 
-        <!-- GridPane ajustado -->
+
         <GridPane alignment="CENTER" hgap="10" vgap="10" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="ALWAYS" percentWidth="11.0" />
@@ -43,7 +43,7 @@
             <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" />
             </rowConstraints>
 
-            <!-- Contenido del GridPane -->
+
             <Label text="ID:">
             <GridPane.margin>
                <Insets left="30.0" />
@@ -92,7 +92,7 @@
             <Label text="Ciudad:" GridPane.columnIndex="4" />
             <ComboBox fx:id="txtCiudad" prefHeight="25.0" prefWidth="180.0" promptText="Ciudad" GridPane.columnIndex="4" />
 
-            <!-- Botones más grandes -->
+
             <Button fx:id="btnRegistrar" prefHeight="49.0" prefWidth="148.0" text="Registrar" GridPane.columnIndex="2" GridPane.rowIndex="4" />
             <Button fx:id="btnLimpiar" prefHeight="50.0" prefWidth="148.0" text="Limpiar" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <HBox alignment="CENTER" prefHeight="0.0" prefWidth="148.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
@@ -118,7 +118,7 @@
 
         <!-- AnchorPane con TableView -->
         <AnchorPane layoutY="331.0" prefHeight="228.0" prefWidth="800.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="331.0">
-            <TableView fx:id="tblSucursales" layoutX="46.0" layoutY="7.0" maxWidth="680.0" prefHeight="214.0" prefWidth="680.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="74.0">
+            <TableView fx:id="tblEmpleados" layoutX="46.0" layoutY="7.0" maxWidth="680.0" prefHeight="214.0" prefWidth="680.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="74.0">
                 <columns>
                     <TableColumn fx:id="colIdEmpleado" maxWidth="80.0" minWidth="15.0" prefWidth="20.0" text="ID " />
                     <TableColumn fx:id="colNombre" maxWidth="300.0" minWidth="40.0" prefWidth="50.0" text="Nombre" />

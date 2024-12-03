@@ -10,6 +10,10 @@ public class Empleado {
     private Persona persona;
     private Usuario usuario;
 
+    public Empleado() {
+
+    }
+
     // Constructor
     public Empleado(int idEmpleado, int idSucursal, int idPersona, int idUsuario, int activo, Persona persona, Usuario usuario) {
         this.idEmpleado = idEmpleado;
@@ -21,9 +25,7 @@ public class Empleado {
         this.usuario = usuario;
     }
 
-    public Empleado() {
 
-    }
 
     // Getters and Setters
     public int getIdEmpleado() {
