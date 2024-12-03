@@ -49,7 +49,7 @@
             </Label>
             <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
               <image>
-                <Image url="@img/icons8-person-30.png" />
+                <Image url="@img/clientes.png" />
               </image>
             </ImageView>
           </children>
