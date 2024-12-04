@@ -10,6 +10,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.util.StringConverter;
 import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;
 import org.utleon.zarape.model.Ciudad;
@@ -73,6 +74,23 @@ public class ControllerCliente {
 
         tabCl.setItems(clientes);
         tabCl.setOnMouseClicked(this::modificarCl);
+        selector.setConverter(new StringConverter<Ciudad>() {
+            @Override
+            public String toString(Ciudad ciudad) {
+                return ciudad != null ? ciudad.getNombre() : "";
+            }
+
+            @Override
+            public Ciudad fromString(String nombre) {
+                // Este método no se usará en este caso
+                return null;
+            }
+        });
+        selector.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                System.out.println("Ciudad seleccionada: " + newValue.getNombre());
+            }
+        });
         loadCiudades();
         imprimirTablaCl();
     }
